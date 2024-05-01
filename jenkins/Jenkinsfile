@@ -34,7 +34,6 @@ pipeline {
                 withSonarQubeEnv('SonarCloud') {
                     # sh "mvn sonar:sonar -Dsonar.projectName=bashashaikgit \ -Dsonar.projectKey=bashashaikgit"
                     sh "mvn sonar:sonar -Dsonar.organization='bashashaikgit' -Dsonar.projectName=bashashaikgit"
-
                 }
             }
         }
