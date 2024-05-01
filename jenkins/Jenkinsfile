@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    environment {
+        SONAR_ORGANIZATION_KEY = credentials('SonarCloud')
+    }
     
     stages {
         stage('checkout') {
@@ -31,7 +35,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
-                    sh 'mvn sonar:sonar'
+                    sh "mvn sonar:sonar -Dsonar.organization=${SONAR_ORGANIZATION_KEY}"
                 }
             }
         }
