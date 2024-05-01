@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SONAR_ORGANIZATION_KEY = credentials('SonarCloud')
+        SONAR_ORGANIZATION_KEY = testorganization1293
     }
     
     stages {
