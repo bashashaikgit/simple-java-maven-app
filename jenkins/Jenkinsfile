@@ -32,7 +32,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
-                    sh "mvn sonar:sonar -Dsonar.organization='testorganization1293'"
+                    sh "mvn sonar:sonar -Dsonar.organization='bashashaikgit'"
                 }
             }
         }
