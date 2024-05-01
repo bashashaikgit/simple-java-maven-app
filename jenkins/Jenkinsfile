@@ -7,7 +7,7 @@ pipeline {
                 script {
                     git(
                         branch: 'master',
-                        credentialsId: 'f02ca424-2475-4f08-b66c-22db9e5a37cc',
+                        credentialsId: 'github',
                         url: 'https://github.com/bashashaikgit/simple-java-maven-app.git'
                     )
                 }
