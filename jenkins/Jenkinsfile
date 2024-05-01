@@ -32,7 +32,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
-                    sh "mvn sonar:sonar -Dsonar.organization='bashashaikgit'"
+                    sh "mvn sonar:sonar -Dsonar.projectName=bashashaikgit \ -Dsonar.projectKey=bashashaikgit"
                 }
             }
         }
