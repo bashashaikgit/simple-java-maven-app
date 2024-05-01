@@ -28,6 +28,13 @@ pipeline {
                 }
             }
         }
+        stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('SonarCloud') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
+        }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
